@@ -1,13 +1,8 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+name: 'Build Release'
+description: 'Build a release'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  releaseId:
+    description: 'ID of release built'
 runs:
   using: 'node12'
   main: 'dist/index.js'
