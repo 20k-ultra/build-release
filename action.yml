@@ -1,9 +1,13 @@
 name: 'Build Release'
 description: 'Build a release'
 outputs:
-  release: # id of release
+  release:
     description: 'ID of release built'
-  timeTo: # id of output
+  releaseId:
+    description: 'ID of release built'
+  time:
+    description: 'The time we greeted you'
+  timeTo:
     description: 'The time we greeted you'
 runs:
   using: 'node12'
