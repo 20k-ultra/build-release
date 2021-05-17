@@ -6055,27 +6055,13 @@ module.exports = require("zlib");;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-// const core = require('@actions/core');
-// const github = require('@actions/github');
-
-// try {
-//   core.setOutput("releaseId", (Math.random() * 1000000).toFixed(0));
-//   // Get the JSON webhook payload for the event that triggered the workflow
-//   const payload = JSON.stringify(github.context.payload, undefined, 2)
-//   console.log(`The event payload: ${payload}`);
-// } catch (error) {
-//   core.setFailed(error.message);
-// }
-
 const core = __nccwpck_require__(800);
 const github = __nccwpck_require__(996);
 
 try {
-  // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
-  core.setOutput("time", time);
+  core.setOutput("time", (Math.random() * 1000000).toFixed(0));
+  core.setOutput("releaseId", (Math.random() * 1000000).toFixed(0));
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
