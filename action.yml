@@ -1,8 +1,17 @@
-name: 'Build Release'
-description: 'Build a release'
+# name: 'Build Release'
+# description: 'Build a release'
+# outputs:
+#   releaseId:
+#     description: 'ID of release built'
+# runs:
+#   using: 'node12'
+#   main: 'dist/index.js'
+
+name: 'Hello World'
+description: 'Greet someone and record the time'
 outputs:
-  releaseId:
-    description: 'ID of release built'
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'index.js'
