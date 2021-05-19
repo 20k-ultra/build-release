@@ -1,5 +1,8 @@
 name: 'Build Release'
 description: 'Build a release'
+inputs:
+  token:
+    description: 'The GITHUB_TOKEN secret'
 outputs:
   releaseId:
     description: 'ID of release built'
